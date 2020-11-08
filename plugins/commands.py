@@ -4,7 +4,7 @@ from info import START_MSG, CHANNELS, ADMINS
 from utils import Media
 
 
-@Client.on_message(filters.command('start'))
+@Client.on_message(filters.command('start') & filters.chat(ADMINS))
 async def start(bot, message):
     """Start command handler"""
     buttons = [[
