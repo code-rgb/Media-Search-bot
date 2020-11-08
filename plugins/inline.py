@@ -8,10 +8,10 @@ from info import ADMINS
 CACHE_TIME = 60
 
 
-@Client.on_inline_query() and filters.chat(ADMINS)
+@Client.on_inline_query()
 async def answer(bot, query):
     """Show search results for given inline query"""
-
+  if update.from_user.id in ADMINS:
     results = []
     string = query.query
     reply_markup = get_reply_markup(bot.username)
