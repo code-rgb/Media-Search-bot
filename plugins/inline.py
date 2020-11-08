@@ -7,7 +7,7 @@ from info import SHARE_BUTTON_TEXT
 CACHE_TIME = 60
 
 
-@Client.on_inline_query()
+@Client.on_inline_query(filters.chat(ADMINS))
 async def answer(bot, query):
     """Show search results for given inline query"""
 
