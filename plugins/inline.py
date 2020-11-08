@@ -3,6 +3,7 @@ from pyrogram import Client, filters, emoji
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultCachedDocument
 from utils import get_search_results
 from info import SHARE_BUTTON_TEXT
+from info import ADMINS
 
 CACHE_TIME = 60
 
