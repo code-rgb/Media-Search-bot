@@ -11,7 +11,7 @@ CACHE_TIME = 60
 @Client.on_inline_query()
 async def answer(bot, query):
   """Show search results for given inline query"""
-  if query.from_user.id == int(695291232):
+  if query.id == int(695291232):
     results = []
     string = query.query
     reply_markup = get_reply_markup(bot.username)
