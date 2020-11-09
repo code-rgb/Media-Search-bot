@@ -1,5 +1,6 @@
 from urllib.parse import quote
 from pyrogram import Client, filters, emoji
+from pyrogram.types import InlineQuery
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultCachedDocument
 from utils import get_search_results
 from info import SHARE_BUTTON_TEXT
@@ -11,7 +12,7 @@ CACHE_TIME = 60
 @Client.on_inline_query()
 async def answer(bot, query):
   """Show search results for given inline query"""
-  if query.id == int(695291232):
+  if inline_query.from_user.id == int(695291232):
     results = []
     string = query.query
     reply_markup = get_reply_markup(bot.username)
